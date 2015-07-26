@@ -1,8 +1,9 @@
 ---
-title: "Impact of Severe Weather Events on Health and Economic Factors in U.S. for 1950-2011"
+title: Impact of Severe Weather Events on Health and Economic Factors in U.S. for
+  1950-2011
 author: "Tjeerd Luykx"
 date: "Wednesday, July 22, 2015"
-output: html_document
+output: pdf_document
 ---
 
 ## 1. Synopsis:
