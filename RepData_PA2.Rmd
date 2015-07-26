@@ -21,7 +21,6 @@ The basic goal of this report is to explore the NOAA Storm Database and answer s
 The following packages are used to conduct loading, computation and graphical reporting. For displaying purposes also digit and width options are set below. 
 
 ```{r,warning=FALSE, message=FALSE}
-setwd("C:/Users/Eigenaar/Documents/RStudio/RepData_PeerAssessment2")
 
 library(knitr)
 library(RCurl)
@@ -29,7 +28,7 @@ library(R.utils)
 library(dplyr)
 library(ggplot2)
 library(lubridate)
-library(gridExtra)
+
 
 options(digits = 7)
 opts_chunk$set(fig.width=10)
@@ -117,7 +116,7 @@ W.Data.f$CropDmg <- W.Data.f$CROPDMG * (10 ** CropDmgExp)
 
 ```{r, cache=TRUE}
 
-CPI.m <- read.csv("C:/Users/Eigenaar/Documents/RStudio/RepData_PeerAssessment2/data/CPIAUCSL.csv", header = TRUE)
+CPI.m <- read.csv(file="./data/CPIAUCSL.csv", header = TRUE)
 CPI.m $cpi_year <- year(CPI.m$DATE)
 CPI.y <- CPI.m %>% group_by(cpi_year) %>% summarize(cpi = mean(VALUE))
 CPI.y <- as.data.frame(CPI.y)
